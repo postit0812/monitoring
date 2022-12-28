@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bcs-root',
-  templateUrl: './app.component.html',
+  template: `<bcs-board></bcs-board>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
