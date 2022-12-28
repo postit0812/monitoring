@@ -1,0 +1,14 @@
+ [
+    {
+      "name": "CP Server",
+      "url": "https://772ba428-a04a-40a3-be64-2d6349d3cb6b.mock.pstmn.io/1"
+    },
+    {
+      "name": "RT Server",
+      "url": "https://772ba428-a04a-40a3-be64-2d6349d3cb6b.mock.pstmn.io/2"
+    },
+    {
+      "name": "Test Server",
+      "url": "https://772ba428-a04a-40a3-be64-2d6349d3cb6b.mock.pstmn.io/3"
+    }
+  ]

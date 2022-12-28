@@ -1,0 +1,40 @@
+<div class="container-fuid">
+  <div class="row ms-2 me-2">
+    <div class="col text-center mb-1">
+      <h1>Monitoring</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <table class="table table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Module</th>
+              <th scope="col">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let mod of bcsModules'>
+              <td scope="row">{{mod.name}}</td>
+              <td><button type="button" (click)='selectModule(mod)' style="width: 120px;" class="btn btn-sm btn-{{mod.health}} btn-block">{{mod.status}}  
+              </button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-8" [hidden]='!display'>
+        <div class="container p-4 mt-3">
+          <div class="row text-center mb-4 border rounded p-3">
+            <div class="col text-primary"><h2>{{selectedModule?.name}}</h2></div>
+            <div class="col"><button type="button" class="btn btn-primary btn-block" (click)="selectDetailType('health')">Health Check</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" (click)="selectDetailType('process')">Process Info</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" (click)="selectDetailType('metrics')">Metrics</button></div>
+          </div>
+
+          <div class="row border pt-3 rounded" style="min-height: 500px;">
+            <div class="col"><pre><p>{{data | json}}</p></pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
